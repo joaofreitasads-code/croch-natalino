@@ -13,7 +13,6 @@ import { PricingSection } from './components/PricingSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
-import { ExitPopup } from './components/ExitPopup';
 import { ShoppingBag } from 'lucide-react';
 
 export default function App() {
@@ -102,8 +101,6 @@ export default function App() {
           </button>
         </div>
       )}
-      {/* Exit Intent Pop-up for R$ 16,90 offer */}
-      <ExitPopup mode={currentMode} />
     </div>
   );
 }

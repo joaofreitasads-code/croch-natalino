@@ -4,34 +4,19 @@
 
 /**
  * Optimizes image URLs by requesting appropriate dimensions and formats from CDNs.
- * - Atomicat Media (BunnyCDN): adds responsive width & compression parameters.
- * - Imgur: requests huge (1024px) / large (640px) thumbnails instead of raw multi-megabyte PNG files.
+ * - Atomicat Media (BunnyCDN): adds responsive width & compression parameters while preserving PNG alpha transparency.
+ * - Imgur: Do NOT append suffixes to PNG images because Imgur converts them to JPEGs, turning transparent backgrounds solid black.
  */
 export function optimizeImageUrl(url: string, width = 600): string {
   if (!url) return url;
 
-  // BunnyCDN (Atomicat Media) supports on-the-fly resizing and quality reduction
+  // BunnyCDN (Atomicat Media) supports on-the-fly resizing and quality reduction while preserving transparent PNGs
   if (url.includes('media.atomicatmedia.net')) {
     if (url.includes('?')) return url;
     return `${url}?width=${width}&quality=85`;
   }
 
-  // Imgur images: append 'h' (huge 1024px) or 'l' (640px) for 10x-20x smaller file sizes
-  if (url.includes('i.imgur.com')) {
-    if (url.endsWith('.mp4') || url.endsWith('.webm') || url.endsWith('.gif')) {
-      return url;
-    }
-    const match = url.match(/https:\/\/i\.imgur\.com\/([a-zA-Z0-9]+)\.(png|jpg|jpeg|webp)/i);
-    if (match) {
-      const id = match[1];
-      const ext = match[2];
-      // Only append if it's a standard ID not already suffixed with a size code
-      if (!id.endsWith('h') && !id.endsWith('l') && id.length <= 7) {
-        return `https://i.imgur.com/${id}h.${ext}`;
-      }
-    }
-  }
-
+  // Preserve Imgur PNG images untouched to maintain 100% transparent backgrounds
   return url;
 }
 
