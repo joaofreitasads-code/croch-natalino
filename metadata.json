@@ -1,0 +1,6 @@
+{
+  "name": "Artesanato de Crochê - Receitas Exclusivas",
+  "description": "Mais de 150 receitas exclusivas de Amigurumi Natalino e Crochê Católico com passo a passo ilustrado, gráficos e bônus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  .font-assistant {
+    font-family: 'Assistant', sans-serif;
+  }
+  .font-abeezee {
+    font-family: 'ABeeZee', sans-serif;
+  }
+  .font-atkinson {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .font-georgia {
+    font-family: Georgia, serif;
+  }
+}
+
+@keyframes pulse-zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-zoom {
+  animation: pulse-zoom 2.2s infinite ease-in-out;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 36s linear infinite;
+  animation-play-state: running !important;
+  will-change: transform;
+  touch-action: pan-y;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 40s linear infinite;
+  animation-play-state: running !important;
+  will-change: transform;
+  touch-action: pan-y;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover,
+.animate-marquee-left:focus,
+.animate-marquee-right:focus,
+.animate-marquee-left:active,
+.animate-marquee-right:active {
+  animation-play-state: running !important;
+}
+
+@keyframes float-sleigh {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1.5deg);
+  }
+}
+
+.animate-float-sleigh {
+  animation: float-sleigh 3.5s ease-in-out infinite;
+}
