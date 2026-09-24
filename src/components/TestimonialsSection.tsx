@@ -38,7 +38,7 @@ export const TestimonialsSection: React.FC = () => {
           <div className="hidden 2xl:flex flex-col items-center gap-6 absolute -left-28 top-1/2 -translate-y-1/2 pointer-events-none z-10">
             <div className="w-24 h-24 rounded-2xl bg-white/60 p-2 shadow-lg backdrop-blur-xs transform -rotate-6 transition-transform hover:rotate-0">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/SfdqBW2392920.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/SfdqBW2392920.png?width=150&quality=85"
                 alt="Papai Noel Amigurumi"
                 className="w-full h-full object-contain filter drop-shadow"
                 loading="lazy"
@@ -47,7 +47,7 @@ export const TestimonialsSection: React.FC = () => {
             </div>
             <div className="w-20 h-20 rounded-2xl bg-white/60 p-2 shadow-lg backdrop-blur-xs transform rotate-3">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/YQGKEk1981745.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/YQGKEk1981745.png?width=150&quality=85"
                 alt="Árvore de Natal Amigurumi"
                 className="w-full h-full object-contain filter drop-shadow"
                 loading="lazy"
@@ -60,7 +60,7 @@ export const TestimonialsSection: React.FC = () => {
           <div className="hidden 2xl:flex flex-col items-center gap-6 absolute -right-28 top-1/2 -translate-y-1/2 pointer-events-none z-10">
             <div className="w-24 h-24 rounded-2xl bg-white/60 p-2 shadow-lg backdrop-blur-xs transform rotate-6 transition-transform hover:rotate-0">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/AusRdY5814674.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/AusRdY5814674.png?width=150&quality=85"
                 alt="Rena Amigurumi"
                 className="w-full h-full object-contain filter drop-shadow"
                 loading="lazy"
@@ -69,7 +69,7 @@ export const TestimonialsSection: React.FC = () => {
             </div>
             <div className="w-20 h-20 rounded-2xl bg-white/60 p-2 shadow-lg backdrop-blur-xs transform -rotate-3">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/BkILeM2433386.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/BkILeM2433386.png?width=150&quality=85"
                 alt="Guirlanda Amigurumi"
                 className="w-full h-full object-contain filter drop-shadow"
                 loading="lazy"
@@ -86,6 +86,7 @@ export const TestimonialsSection: React.FC = () => {
                 <YouTubePlayVideo
                   id="depoimento-video-1"
                   src="https://i.imgur.com/d9oJDUL.mp4"
+                  preload="none"
                   className="w-full h-full"
                   videoClassName="w-full h-full object-cover"
                 />
@@ -98,6 +99,7 @@ export const TestimonialsSection: React.FC = () => {
                 <YouTubePlayVideo
                   id="depoimento-video-2"
                   src="https://i.imgur.com/erjdJw9.mp4"
+                  preload="none"
                   className="w-full h-full"
                   videoClassName="w-full h-full object-cover"
                 />
@@ -110,6 +112,7 @@ export const TestimonialsSection: React.FC = () => {
                 <YouTubePlayVideo
                   id="depoimento-video-3"
                   src="https://i.imgur.com/EDc3tyE.mp4"
+                  preload="none"
                   className="w-full h-full"
                   videoClassName="w-full h-full object-cover"
                 />
@@ -121,7 +124,7 @@ export const TestimonialsSection: React.FC = () => {
           <div className="flex 2xl:hidden items-center justify-center gap-6 mt-8">
             <div className="w-14 h-14 rounded-xl bg-white/60 p-1.5 shadow-md">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/SfdqBW2392920.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/SfdqBW2392920.png?width=100&quality=85"
                 alt="Papai Noel"
                 className="w-full h-full object-contain"
                 loading="lazy"
@@ -130,7 +133,7 @@ export const TestimonialsSection: React.FC = () => {
             </div>
             <div className="w-14 h-14 rounded-xl bg-white/60 p-1.5 shadow-md">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/AusRdY5814674.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/AusRdY5814674.png?width=100&quality=85"
                 alt="Rena"
                 className="w-full h-full object-contain"
                 loading="lazy"
@@ -139,7 +142,7 @@ export const TestimonialsSection: React.FC = () => {
             </div>
             <div className="w-14 h-14 rounded-xl bg-white/60 p-1.5 shadow-md">
               <img
-                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/BkILeM2433386.png"
+                src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/BkILeM2433386.png?width=100&quality=85"
                 alt="Guirlanda"
                 className="w-full h-full object-contain"
                 loading="lazy"

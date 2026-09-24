@@ -1,6 +1,7 @@
 import React from 'react';
 import { CollectionMode } from '../types';
 import { ShieldCheck, ShoppingCart, Award } from 'lucide-react';
+import { optimizeImageUrl } from '../utils/optimizeMedia';
 
 interface BenefitsGridProps {
   mode: CollectionMode;
@@ -54,7 +55,7 @@ export const BenefitsGrid: React.FC<BenefitsGridProps> = ({ mode, onCtaClick }) 
         {/* Imagem principal da seção */}
         <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#e5b54f] bg-white p-2 sm:p-4 transition-transform hover:scale-[1.01] duration-300">
           <img
-            src="https://i.imgur.com/S5NsZjA.png"
+            src={optimizeImageUrl('https://i.imgur.com/S5NsZjA.png', 800)}
             alt="Mesmo sem ser avançada no crochê você vai conseguir"
             className="w-full h-auto object-contain rounded-2xl"
             loading="lazy"

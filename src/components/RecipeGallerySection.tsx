@@ -93,7 +93,7 @@ export const RecipeGallerySection: React.FC<RecipeGallerySectionProps> = ({ mode
                 {/* Santa amigurumi inside sleigh */}
                 <div className="absolute left-1/2 -translate-x-1/2 bottom-10 w-28 sm:w-32 z-10">
                   <img
-                    src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/SfdqBW2392920.png"
+                    src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/SfdqBW2392920.png?width=300&quality=85"
                     alt="Papai Noel no Trenó"
                     className="w-full h-auto object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)]"
                     loading="lazy"

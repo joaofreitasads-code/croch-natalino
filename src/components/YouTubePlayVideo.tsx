@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { getVideoPoster } from '../utils/optimizeMedia';
 
 interface YouTubePlayVideoProps {
   id: string;
@@ -20,8 +21,8 @@ export const YouTubePlayVideo: React.FC<YouTubePlayVideoProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Appending #t=0.001 forces iOS Safari and mobile Chrome to render the first frame thumbnail
-  const videoSrc = src.includes('#') ? src : `${src}#t=0.001`;
+  // Automatically derive a lightweight first-frame poster (40KB) if none is provided
+  const effectivePoster = poster || getVideoPoster(src);
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -47,8 +48,8 @@ export const YouTubePlayVideo: React.FC<YouTubePlayVideoProps> = ({
       <video
         ref={videoRef}
         id={id}
-        src={videoSrc}
-        poster={poster}
+        src={src}
+        poster={effectivePoster}
         controls={isPlaying}
         playsInline
         preload={preload}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CollectionMode } from '../types';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { optimizeImageUrl } from '../utils/optimizeMedia';
 
 interface EarningsSectionProps {
   mode: CollectionMode;
@@ -10,22 +11,22 @@ interface EarningsSectionProps {
 const EARNINGS_TESTIMONIALS = [
   {
     id: 1,
-    image: 'https://i.imgur.com/sTf3c5Z.png',
+    image: optimizeImageUrl('https://i.imgur.com/sTf3c5Z.png', 600),
     alt: 'Depoimento de aluna faturando com amigurumi'
   },
   {
     id: 2,
-    image: 'https://i.imgur.com/vupEp1Y.png',
+    image: optimizeImageUrl('https://i.imgur.com/vupEp1Y.png', 600),
     alt: 'Depoimento de faturamento e encomendas'
   },
   {
     id: 3,
-    image: 'https://i.imgur.com/b6RI7q6.png',
+    image: optimizeImageUrl('https://i.imgur.com/b6RI7q6.png', 600),
     alt: 'Depoimento de aluna com vendas e encomendas de Natal'
   },
   {
     id: 4,
-    image: 'https://i.imgur.com/d6jU16R.png',
+    image: optimizeImageUrl('https://i.imgur.com/d6jU16R.png', 600),
     alt: 'Depoimento de aluna com resultados reais'
   }
 ];
@@ -69,7 +70,7 @@ export const EarningsSection: React.FC<EarningsSectionProps> = ({ mode, onCtaCli
           {/* Forma 1 - Imagem Cenário de Renda Extra */}
           <div className="rounded-3xl overflow-hidden shadow-xl border-2 border-[#d4a017]/50 bg-white flex items-center justify-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
             <img
-              src="https://i.imgur.com/9q6Kqcn.png"
+              src={optimizeImageUrl('https://i.imgur.com/9q6Kqcn.png', 700)}
               alt="Cenário de Renda Extra - Transforme suas horas livres em encomendas de Natal"
               className="w-full h-auto object-contain rounded-3xl"
               loading="lazy"
@@ -81,7 +82,7 @@ export const EarningsSection: React.FC<EarningsSectionProps> = ({ mode, onCtaCli
           {/* Forma 2 - Imagem Cenário Renda Extra / Lucrativa */}
           <div className="rounded-3xl overflow-hidden shadow-xl border-2 border-emerald-600/50 bg-white flex items-center justify-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
             <img
-              src="https://i.imgur.com/eH834Pc.png"
+              src={optimizeImageUrl('https://i.imgur.com/eH834Pc.png', 700)}
               alt="Cenário de Faturamento e Encomendas"
               className="w-full h-auto object-contain rounded-3xl"
               loading="lazy"

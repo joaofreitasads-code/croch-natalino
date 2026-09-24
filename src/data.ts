@@ -1,12 +1,13 @@
 import { BonusItem, FaqItem, PricingPlan, RecipeItem, StructureStep, TestimonialItem } from './types';
+import { optimizeImageUrl } from './utils/optimizeMedia';
 
 export const TESTIMONIALS: TestimonialItem[] = [
-  { id: '1', image: 'https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/KnvbdI9428827.png' },
-  { id: '2', image: 'https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/aFRzdd9428827.png' },
-  { id: '3', image: 'https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/XydQqS3121551.webp' },
-  { id: '4', image: 'https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/djbLNh0886738.png' },
-  { id: '5', image: 'https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/AuWLfB8972705.png' },
-  { id: '6', image: 'https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/hlvCXl8972705.png' }
+  { id: '1', image: optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/KnvbdI9428827.png', 400) },
+  { id: '2', image: optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/aFRzdd9428827.png', 400) },
+  { id: '3', image: optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/XydQqS3121551.webp', 400) },
+  { id: '4', image: optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/djbLNh0886738.png', 400) },
+  { id: '5', image: optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/AuWLfB8972705.png', 400) },
+  { id: '6', image: optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/hlvCXl8972705.png', 400) }
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
@@ -37,7 +38,7 @@ export const FAQ_ITEMS: FaqItem[] = [
 ];
 
 // Dados da Coleção Natalina
-export const NATALINO_DATA = {
+const RAW_NATALINO_DATA = {
   badge: '🎄 Coleção Amigurumi Natalino Exclusivo 🎅🏻',
   titleHighlight: '150 receitas de',
   titleMain: 'amigurumi natalino',
@@ -212,7 +213,7 @@ export const NATALINO_DATA = {
 };
 
 // Dados da Coleção Católica
-export const CATOLICO_DATA = {
+const RAW_CATOLICO_DATA = {
   badge: '✝️ Coleção Católica Exclusiva ✝️',
   titleHighlight: '150 Receitas de',
   titleMain: 'crochê católico',
@@ -379,3 +380,24 @@ export const CATOLICO_DATA = {
     }
   ] as PricingPlan[]
 };
+
+function optimizeCollectionData<T extends {
+  heroImage: string;
+  structureSteps: StructureStep[];
+  recipes: RecipeItem[];
+  bonuses: BonusItem[];
+  plans: PricingPlan[];
+}>(data: T): T {
+  return {
+    ...data,
+    heroImage: optimizeImageUrl(data.heroImage, 800),
+    structureSteps: data.structureSteps.map(s => ({ ...s, image: optimizeImageUrl(s.image, 600) })),
+    recipes: data.recipes.map(r => ({ ...r, image: optimizeImageUrl(r.image, 480) })),
+    bonuses: data.bonuses.map(b => ({ ...b, image: optimizeImageUrl(b.image, 480) })),
+    plans: data.plans.map(p => ({ ...p, image: optimizeImageUrl(p.image, 700) }))
+  };
+}
+
+export const NATALINO_DATA = optimizeCollectionData(RAW_NATALINO_DATA);
+export const CATOLICO_DATA = optimizeCollectionData(RAW_CATOLICO_DATA);
+
