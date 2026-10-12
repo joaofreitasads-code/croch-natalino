@@ -107,7 +107,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ mode }) => {
             </div>
           </div>
 
-          {/* Card 2: PACOTE COMPLETO (R$ 37,90 - Mais Escolhido) */}
+          {/* Card 2: PACOTE COMPLETO (R$ 29,90 - Mais Escolhido) */}
           <div className="bg-gradient-to-b from-[#a81313] via-[#8f0f0f] to-[#750b0b] text-white rounded-3xl p-6 sm:p-8 shadow-[0_20px_50px_rgba(117,11,11,0.5)] border-4 border-[#e5b54f] ring-2 ring-[#750b0b] ring-offset-2 ring-offset-[#e5b54f]/40 flex flex-col justify-between relative order-2 transition-transform hover:scale-[1.02] duration-300">
             {/* Top Ribbon Badge */}
             <div className="absolute -top-5 left-1/2 -translate-x-1/2">
@@ -174,7 +174,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ mode }) => {
                 onClick={() => {
                   trackPixelEvent('InitiateCheckout', {
                     content_name: 'Pacote Completo',
-                    value: 37.90,
+                    value: 29.90,
                     currency: 'BRL'
                   });
                 }}

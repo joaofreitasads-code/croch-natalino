@@ -187,8 +187,8 @@ const RAW_NATALINO_DATA = {
         'Acesso vitalício sem mensalidades'
       ],
       originalPrice: 'R$147,00',
-      pixPrice: 'R$37,90',
-      installment: 'ou 6X de 7,15 no cartão',
+      pixPrice: 'R$29,90',
+      installment: 'ou 6X de 5,64 no cartão',
       checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=5PYUDLG'
     },
     {
@@ -356,8 +356,8 @@ const RAW_CATOLICO_DATA = {
         'Acesso vitalício'
       ],
       originalPrice: 'R$147,00',
-      pixPrice: 'R$37,90',
-      installment: 'ou 6X de 7,15 no cartão',
+      pixPrice: 'R$29,90',
+      installment: 'ou 6X de 5,64 no cartão',
       checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=5PYUDLG'
     },
     {

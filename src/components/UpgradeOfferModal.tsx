@@ -64,10 +64,10 @@ export const UpgradeOfferModal: React.FC<UpgradeOfferModalProps> = ({
           <div className="text-center mb-2">
             <div className="flex items-center justify-center gap-2">
               <span className="text-xs text-neutral-300 line-through">
-                De R$ 37,90
+                De R$ 29,90
               </span>
               <span className="text-[10px] font-bold bg-emerald-600 text-white px-2 py-0.5 rounded-full">
-                50% OFF
+                37% OFF
               </span>
             </div>
             <div className="flex items-baseline justify-center gap-1.5 mt-0.5">
