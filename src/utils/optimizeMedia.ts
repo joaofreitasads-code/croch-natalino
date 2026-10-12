@@ -10,19 +10,24 @@
 export function optimizeImageUrl(url: string, width = 600): string {
   if (!url) return url;
 
-  // BunnyCDN (Atomicat Media) supports on-the-fly resizing and quality reduction while preserving transparent PNGs
+  // BunnyCDN (Atomicat Media): supports on-the-fly resizing, quality compression, and WebP format
   if (url.includes('media.atomicatmedia.net')) {
-    if (url.includes('?')) return url;
-    return `${url}?width=${width}&quality=85`;
+    const baseUrl = url.split('?')[0];
+    return `${baseUrl}?width=${width}&quality=80&format=webp`;
   }
 
-  // Preserve Imgur PNG images untouched to maintain 100% transparent backgrounds
+  // Imgur: supports .webp natively with full alpha transparency preservation and ~90% file size reduction
+  if (url.includes('i.imgur.com')) {
+    if (url.includes('.mp4')) return url;
+    return url.replace(/\.(png|jpe?g)(\?.*)?$/i, '.webp');
+  }
+
   return url;
 }
 
 /**
  * Derives an ultra-lightweight JPEG poster (approx 40KB) for Imgur video files
- * to prevent mobile network starvation during page load.
+ * to render the first frame instantaneously before playback.
  */
 export function getVideoPoster(videoUrl?: string): string | undefined {
   if (!videoUrl) return undefined;

@@ -18,7 +18,7 @@ export const UpgradeOfferModal: React.FC<UpgradeOfferModalProps> = ({
 }) => {
   if (!isOpen) return null;
 
-  const upgradeCheckoutUrl = 'https://checkout.wiven.com.br/checkout/cmudrduc701t501oir4uij9xz?offer=A6867K2';
+  const upgradeCheckoutUrl = 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=TM6Y742';
 
   return (
     <div 

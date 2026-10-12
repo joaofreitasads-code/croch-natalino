@@ -189,7 +189,7 @@ const RAW_NATALINO_DATA = {
       originalPrice: 'R$147,00',
       pixPrice: 'R$37,90',
       installment: 'ou 6X de 7,15 no cartão',
-      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmudrduc701t501oir4uij9xz?offer=T3LIYHT'
+      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=5PYUDLG'
     },
     {
       id: 'basico',
@@ -207,7 +207,7 @@ const RAW_NATALINO_DATA = {
       originalPrice: 'R$97,00',
       pixPrice: 'R$10,90',
       installment: 'ou 2X de 5,82 no cartão',
-      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmudrduc701t501oir4uij9xz?offer=I3TLGCM'
+      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=6W5W6B2'
     }
   ] as PricingPlan[]
 };
@@ -358,7 +358,7 @@ const RAW_CATOLICO_DATA = {
       originalPrice: 'R$147,00',
       pixPrice: 'R$37,90',
       installment: 'ou 6X de 7,15 no cartão',
-      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmudrduc701t501oir4uij9xz?offer=T3LIYHT'
+      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=5PYUDLG'
     },
     {
       id: 'basico-catolico',
@@ -376,7 +376,7 @@ const RAW_CATOLICO_DATA = {
       originalPrice: 'R$97,00',
       pixPrice: 'R$10,90',
       installment: 'ou 2X de 5,82 no cartão',
-      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmudrduc701t501oir4uij9xz?offer=I3TLGCM'
+      checkoutUrl: 'https://checkout.wiven.com.br/checkout/cmv4un7au1sqr01psluj76tlr?offer=6W5W6B2'
     }
   ] as PricingPlan[]
 };
@@ -390,11 +390,11 @@ function optimizeCollectionData<T extends {
 }>(data: T): T {
   return {
     ...data,
-    heroImage: optimizeImageUrl(data.heroImage, 800),
-    structureSteps: data.structureSteps.map(s => ({ ...s, image: optimizeImageUrl(s.image, 600) })),
-    recipes: data.recipes.map(r => ({ ...r, image: optimizeImageUrl(r.image, 480) })),
-    bonuses: data.bonuses.map(b => ({ ...b, image: optimizeImageUrl(b.image, 480) })),
-    plans: data.plans.map(p => ({ ...p, image: optimizeImageUrl(p.image, 700) }))
+    heroImage: optimizeImageUrl(data.heroImage, 700),
+    structureSteps: data.structureSteps.map(s => ({ ...s, image: optimizeImageUrl(s.image, 500) })),
+    recipes: data.recipes.map(r => ({ ...r, image: optimizeImageUrl(r.image, 320) })),
+    bonuses: data.bonuses.map(b => ({ ...b, image: optimizeImageUrl(b.image, 360) })),
+    plans: data.plans.map(p => ({ ...p, image: optimizeImageUrl(p.image, 600) }))
   };
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { optimizeImageUrl } from '../utils/optimizeMedia';
 
 export const FourStepsSection: React.FC = () => {
   const steps = [
@@ -38,7 +39,7 @@ export const FourStepsSection: React.FC = () => {
         {/* Illustrated image from page */}
         <div className="max-w-md mx-auto rounded-2xl overflow-hidden shadow-md">
           <img
-            src="https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/mRHzjS9524375.png"
+            src={optimizeImageUrl('https://media.atomicatmedia.net/u/K0g3hTUvVFQ3mhBFVs2JSfKk5WQ2/Pictures/mRHzjS9524375.png', 500)}
             alt="Acesso em 4 passos simples"
             className="w-full h-auto object-contain"
             loading="lazy"

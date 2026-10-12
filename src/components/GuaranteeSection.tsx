@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, ShoppingCart, Award } from 'lucide-react';
+import { optimizeImageUrl } from '../utils/optimizeMedia';
 
 interface GuaranteeSectionProps {
   onCtaClick: () => void;
@@ -12,7 +13,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onCtaClick }
         {/* Seal Image */}
         <div className="w-44 sm:w-56 mx-auto mb-4">
           <img
-            src="https://i.imgur.com/L50hAWa.png"
+            src={optimizeImageUrl('https://i.imgur.com/L50hAWa.png', 400)}
             alt="Selo de Garantia 14 Dias"
             className="w-full h-auto object-contain drop-shadow-xl"
             loading="lazy"

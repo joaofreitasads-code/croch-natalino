@@ -3,12 +3,12 @@ import { CollectionMode } from './types';
 import { HeroSection } from './components/HeroSection';
 import { RecipeStructureSection } from './components/RecipeStructureSection';
 import { RecipeGallerySection } from './components/RecipeGallerySection';
-import { TestimonialsSection } from './components/TestimonialsSection';
 import { BenefitsGrid } from './components/BenefitsGrid';
 import { EarningsSection } from './components/EarningsSection';
 import { OpportunitySection } from './components/OpportunitySection';
 import { BonusSection } from './components/BonusSection';
 import { ForWhomSection } from './components/ForWhomSection';
+import { StudentTestimonialsSection } from './components/StudentTestimonialsSection';
 import { PricingSection } from './components/PricingSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { FaqSection } from './components/FaqSection';
@@ -73,8 +73,8 @@ export default function App() {
         {/* 8. For Whom is this Material */}
         <ForWhomSection mode={currentMode} />
 
-        {/* 9. Testimonials (Veja o que estão falando Sobre Nosso Material) */}
-        <TestimonialsSection />
+        {/* 9. Student Earnings Testimonials Carousel (Comprovantes Reais das Alunas) */}
+        <StudentTestimonialsSection onCtaClick={scrollToPricing} />
 
         {/* 10. Pricing & Checkout Plans (id="Ancora") */}
         <PricingSection mode={currentMode} />
